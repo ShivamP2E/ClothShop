@@ -2,7 +2,9 @@ import React, { useContext } from 'react'
 import { ShopContext } from '../Context/ShopContext'
 import { useParams } from 'react-router'
 import Breadcrums from '../components/Breadcrums/Breadcrums';
-import ProductDisplay from '../components/Productdisplay/ProductDisplay';
+import ProductDisplay from '../components/ProductDisplay/ProductDisplay';
+import DescriptionBox from '../components/DescriptionBox/DescriptionBox';
+import RelatedProducts from '../components/RelatedProduct/RelatedProducts';
 // Product page: opens when we click on any image.
 const Product = () => {
   const {all_product} = useContext(ShopContext);
@@ -12,6 +14,8 @@ const Product = () => {
     <div>
       <Breadcrums product = {product}/>
       <ProductDisplay product= {product}/>
+      <DescriptionBox/>
+      <RelatedProducts />
     </div>
   )
 }

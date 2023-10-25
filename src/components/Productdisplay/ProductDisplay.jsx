@@ -15,7 +15,7 @@ const {product} = props;
                 <img src={product.image} alt=''/>
             </div>
             <div className='productdisplay-img'>
-                <img className='productdisplay-mainm-img' src={product.image} alt=''/>
+                <img className='productdisplay-main-img' src={product.image} alt=''/>
             </div>
         </div>
         <div className='productdisplay-right'>
@@ -35,10 +35,11 @@ const {product} = props;
             <div className='productdisplay-right-prices-new'>
               ${product.new_price}
             </div>
+            </div>
               <div className="productdisplay-right-description">
                 A light weight, usually knitted, pullover shirt,close-fitting and wide a round necklineand short sleeves, worn as undershirt or outershirt garment.
               </div>
-              <div className='productdisplay-right-side'>
+              <div className='productdisplay-right-size'>
                 <h1>Select Size</h1>
                 <div className="productdisplay-right-sizes">
                   <div>S</div>
@@ -51,7 +52,7 @@ const {product} = props;
               <button>ADD TO CART</button>
               <p className='productdisplay-right-catgory'><span> Category :</span> Women, T-Shirt, Crop-Top </p>
               <p className='productdisplay-right-catgory'><span> Tags :</span>Modern, Latest </p>
-          </div>
+         
         </div>
     </div>
   )
