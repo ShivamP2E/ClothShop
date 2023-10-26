@@ -7,7 +7,7 @@ const CartItems = () => {
     const {all_product,cartItems, removeFromCart} = useContext(ShopContext)
     console.log(removeFromCart,"==========")
   return (
-    <div className='caritems'>
+    <div className='cartitems'>
         <div className='cartitems-format-main'>
             <p>Products</p>
             <p>Title</p>
