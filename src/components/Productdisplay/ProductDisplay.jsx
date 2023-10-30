@@ -53,8 +53,7 @@ const {addToCart} =useContext(ShopContext)
               </div>
               <button onClick={()=>{addToCart(product.id)}}>ADD TO CART</button>
               <p className='productdisplay-right-catgory'><span> Category :</span> Women, T-Shirt, Crop-Top </p>
-              <p className='productdisplay-right-catgory'><span> Tags :</span>Modern, Latest </p>
-         
+              <p className='productdisplay-right-catgory'><span> Tags :</span>Modern, Latest </p> 
         </div>
     </div>
   )

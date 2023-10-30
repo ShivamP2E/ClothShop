@@ -26,8 +26,10 @@ function App() {
           <Route path=':productId' element={<Product/>}/>
         </Route>
         <Route path='/cart' element={<Cart/>}/>
+        <Route>
         <Route path='/login' element={<LoginSignup/>}/>
-
+        {/* <Route path=/> */}
+        </Route>
       </Routes>
       <Footer />
       </BrowserRouter>
