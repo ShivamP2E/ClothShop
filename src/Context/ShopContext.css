@@ -1,0 +1,49 @@
+/* Style for the alert message */
+.alert {
+    position: fixed;
+    top: 9%;
+    right: 25%;
+    background-color: #000000; /* Green background color */
+    color: white; /* Text color */
+    padding: 10px 15px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle effect */
+    z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+/* Style for a close button (optional) */
+.close-button {
+    position: absolute;
+    top: 5%;
+    right: 50%;
+    color: white;
+    cursor: pointer;
+}
+
+/* Hover effect for the close button (optional) */
+.close-button:hover {
+    font-weight: bold;
+}
+
+/* Animate the alert message (optional) */
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.alert.fade-out {
+    animation: fadeOut 2s; /* Adjust the animation duration as needed */
+}
+
+/* Additional styles for alert variations (e.g., success, error, warning) */
+.alert.success {
+    background-color: #020d03; /* Green for success */
+}
+
+.alert.error {
+    background-color: #f44336; /* Red for error */
+}
+
+.alert.warning {
+    background-color: #ff9800; /* Orange for warning */
+}

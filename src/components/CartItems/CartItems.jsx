@@ -5,12 +5,12 @@ import remove_icon from '../Assets/cart_cross_icon.png'
 
 const CartItems = () => {
     const {all_product,cartItems, removeFromCart} = useContext(ShopContext)
-    console.log(removeFromCart,"==========") 
     let total = 0;
     all_product.forEach((product)=>{
         if (cartItems[product.id]>0)
         {
             total += product.new_price * cartItems[product.id];
+
         }
     })
 
