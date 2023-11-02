@@ -1,6 +1,7 @@
 import {initializeApp } from 'firebase/app';
 import {
     getAuth, 
+    
     signInWithRedirect,
     signInWithPopup,
     GoogleAuthProvider,
@@ -40,8 +41,8 @@ const firebaseConfig = {
     console.log(userSnapshot);
     console.log(userSnapshot.exists());
 
-    if(!userSnapshot.exists()){
-        const {displayName, email}= userAuth;
+    if (!userSnapshot.exists()){
+        const { displayName, email } = userAuth;
         const createdAt = new Date();
         try{
             await setDoc(userDocRef, {

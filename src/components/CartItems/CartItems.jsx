@@ -5,7 +5,15 @@ import remove_icon from '../Assets/cart_cross_icon.png'
 
 const CartItems = () => {
     const {all_product,cartItems, removeFromCart} = useContext(ShopContext)
-    console.log(removeFromCart,"==========")
+    console.log(removeFromCart,"==========") 
+    let total = 0;
+    all_product.forEach((product)=>{
+        if (cartItems[product.id]>0)
+        {
+            total += product.new_price * cartItems[product.id];
+        }
+    })
+
   return (
     <div className='cartitems'>
         <div className='cartitems-format-main'>
@@ -35,38 +43,35 @@ const CartItems = () => {
         return null; 
         })}
         <div className='cartitems-down'>
-            <div className='cartitems-total'>
-                <h1>Cart Total</h1>
-                <div>
-                    <div className="cartitems-total-item">
-                        <p>
-                            Subtotal
-                        </p>
-                        <p>${0}</p>
+                <div className='cartitems-total'>
+                    <h1>Cart Total</h1>
+                    <div>
+                        <div className="cartitems-total-item">
+                            <p>Subtotal</p>
+                            <p>${total.toFixed(2)}</p>
+                        </div>
+                        <hr />
+                        <div className='cartitems-total-item'>
+                            <p>Shipping fee</p>
+                            <p>Free</p>
+                        </div>
+                        <hr/>
+                        <div className='cartitems-total-item'>
+                            <p>Total</p>
+                            <p>${total.toFixed(2)}</p>
+                        </div>
                     </div>
-                    <hr />
-                    <div className='cartitems-total-item'>
-                        <p>Shipping fee</p>
-                        <p>Free</p>
-                    </div>
-                    <hr/>
-                    <div className='cartitems-total-item'>
-                        <p>Total</p>
-                        <p>${0}</p>
-                    </div>
+                    <button>PROCEED TO CHECKOUT</button>
                 </div>
-                <button>PROCEED TO CHECKOUT</button>
-            </div>
-            <div className="cartitems-promocode">
-                <p>If you have promo code, Enter it here</p>
-                <div className="cartitems-promobox">
-                    <input type="text" placeholder='Promo Code'/>
-                    <button>Submit</button>
+                <div className="cartitems-promocode">
+                    <p>If you have a promo code, enter it here</p>
+                    <div className="cartitems-promobox">
+                        <input type="text" placeholder='Promo Code'/>
+                        <button>Submit</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-  )
+    )
 }
-
 export default CartItems
