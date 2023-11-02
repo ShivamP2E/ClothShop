@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { ShopContext } from '../Context/ShopContext'
 import { useParams } from 'react-router'
 import Breadcrums from '../components/Breadcrums/Breadcrums';
-import ProductDisplay from '../components/ProductDisplay/ProductDisplay';
+import ProductDisplay from '../components/ProductDisplay/ProductDisp';
 import DescriptionBox from '../components/DescriptionBox/DescriptionBox';
 import RelatedProducts from '../components/RelatedProduct/RelatedProducts';
 // Product page: opens when we click on any image.
